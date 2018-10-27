@@ -1,0 +1,18 @@
+<div style="text-align:center; background-color: #6593ad">
+    <h1>
+        Welcome to S.E.A.L
+    </h1>
+    <h3>
+        (Search Engine Automatic Launcher)
+    </h3>
+    <h4>Versión v.{{version}}.0</h4>
+
+    <!-- Es un poco cutre, pero a efectos practicos... -->
+    <h5 *ngIf="(valores$ | async).numeroLanzamientos > 0 && (valores$ | async).numeroLanzamientosSeleccionados == 0">Numero de lanzamientos: {{(valores$ | async).numeroLanzamientos}}, Filtrados: {{(valores$ | async).numeroLanzamientosSeleccionados}}
+    </h5>
+    <h5 *ngIf="(valores$ | async).numeroLanzamientosSeleccionados > 0">Numero de lanzamientos: {{(valores$ | async).numeroLanzamientos}}, Filtrados: {{(valores$ | async).numeroLanzamientosSeleccionados}}
+    </h5>
+
+    <h6 *ngIf="(valores$ | async).nombreLanzamiento !== ''">Ultimo lanzamiento seleccionado : {{(valores$ | async).nombreLanzamiento}}</h6>
+
+</div>

@@ -1,0 +1,3 @@
+<div class="center">
+  <button type="button" class="button" *ngFor="let valor of valoresCriterio" (click)="seleccionado(valor.id)" routerLink="/listaLanzamientos">{{valor.name}}</button>
+</div>
